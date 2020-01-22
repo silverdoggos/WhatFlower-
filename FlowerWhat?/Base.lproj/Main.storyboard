@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1mU-Qj-SYA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlowerWhat_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ays-dU-kPW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="404"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="404" id="U20-j4-puP"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5WB-K9-9NR">
+                                <rect key="frame" x="0.0" y="492" width="414" height="404"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="CIg-91-T9K" userLabel="flowerDescription">
+                                        <rect key="frame" x="20" y="20" width="374" height="342"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="CIg-91-T9K" secondAttribute="height" multiplier="2:1" constant="-310" id="ODK-RL-USi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CIg-91-T9K" secondAttribute="trailing" constant="20" id="FZz-MB-0Hf"/>
+                                    <constraint firstItem="CIg-91-T9K" firstAttribute="top" secondItem="5WB-K9-9NR" secondAttribute="top" constant="20" id="HUU-92-3M5"/>
+                                    <constraint firstItem="CIg-91-T9K" firstAttribute="leading" secondItem="5WB-K9-9NR" secondAttribute="leading" constant="20" id="P49-zm-a6t"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.72941176470000002" green="0.86274509799999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ays-dU-kPW" firstAttribute="top" secondItem="xX1-7V-Twr" secondAttribute="top" id="GGP-bd-2IV"/>
+                            <constraint firstItem="5WB-K9-9NR" firstAttribute="leading" secondItem="xX1-7V-Twr" secondAttribute="leading" id="H2f-c8-12d"/>
+                            <constraint firstItem="Ays-dU-kPW" firstAttribute="leading" secondItem="5WB-K9-9NR" secondAttribute="leading" id="Pyn-Fi-7Ul"/>
+                            <constraint firstItem="Ays-dU-kPW" firstAttribute="trailing" secondItem="5WB-K9-9NR" secondAttribute="trailing" id="cu1-A9-bM3"/>
+                            <constraint firstItem="Ays-dU-kPW" firstAttribute="trailing" secondItem="xX1-7V-Twr" secondAttribute="trailing" id="cww-kp-NcM"/>
+                            <constraint firstItem="Ays-dU-kPW" firstAttribute="top" secondItem="xX1-7V-Twr" secondAttribute="top" id="dbg-kH-tLI"/>
+                            <constraint firstItem="5WB-K9-9NR" firstAttribute="trailing" secondItem="xX1-7V-Twr" secondAttribute="trailing" id="iNJ-gi-FKs"/>
+                            <constraint firstAttribute="bottom" secondItem="5WB-K9-9NR" secondAttribute="bottom" id="iRS-HG-7DP"/>
+                            <constraint firstItem="Ays-dU-kPW" firstAttribute="leading" secondItem="xX1-7V-Twr" secondAttribute="leading" id="npe-BR-RDN"/>
+                            <constraint firstItem="5WB-K9-9NR" firstAttribute="top" secondItem="Ays-dU-kPW" secondAttribute="bottom" id="oSp-0Y-c0U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xX1-7V-Twr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cty-e1-Z4m">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="p5w-SH-H36">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cameraButtonPressed:" destination="BYZ-38-t0r" id="sSy-hA-Ipb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="flowerDescription" destination="CIg-91-T9K" id="YV6-1Z-ata"/>
+                        <outlet property="imageView" destination="Ays-dU-kPW" id="UoU-0Y-dxd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O9h-HC-tFd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1mU-Qj-SYA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i4e-70-hGU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.72941176470000002" green="0.86274509799999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.72941176470000002" green="0.86274509799999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xVK-W3-VN8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nan-Mj-Jf5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>
